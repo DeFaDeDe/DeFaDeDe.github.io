@@ -1,51 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Added lang="en" for accessibility and SEO -->
 <head>
-    <title>DEFADEDE's Projects</title>
+    <title>DEFADEDE's Projects</title> <!-- Added title for browser tab and SEO -->
     <style type="text/css">
         :root {
-            --primary-color: #33ff00;
+            --primary-color: #33ff00; /* Added CSS variable for easier color management and brighter green for better contrast */
         }
         body {
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif; /* Changed from font: arial to font-family with fallback for better compatibility */
             background-color: #000000;
-            margin: 0;
-            padding: 20px;
+            padding: 20px; /* Added padding to prevent text from hugging screen edges */
+        }
+        article {
+            max-width: 800px; /* Added to center content and limit width for better readability */
+            margin: 0 auto; /* Added to center the article container */
         }
         h1 {
-            color: var(--primary-color);
+            color: var(--primary-color); /* Updated to use CSS variable and brighter green */
             text-align: center;
             font-family: 'Courier New', monospace;
             font-style: oblique;
             font-size: 5em;
-            text-shadow: 1px 1px 2px #000000;
+            text-shadow: 1px 1px 2px #000000; /* Added text shadow to improve readability of h1 */
         }
         h2 {
             font-family: 'Brush Script MT', cursive;
+            text-align: center; /* Centered h2 to balance the layout and reduce left-align monotony */
+        }
+        p.intro {
+            text-align: center; /* Centered intro paragraphs for a welcoming, balanced look */
+            max-width: 600px; /* Added to limit width of intro text for readability */
+            margin: 15px auto; /* Added margin to space out intro paragraphs */
+        }
+        .current-project {
+            background: #1a1a1a; /* Added background to highlight current project */
+            padding: 15px; /* Added padding for visual separation */
+            border-left: 4px solid var(--primary-color); /* Added colored border to draw attention */
+            margin: 20px 0; /* Added margin to separate from other sections */
+        }
+        ul {
+            display: flex; /* Added Flexbox to create a grid-like layout for project list */
+            flex-wrap: wrap; /* Added to allow list items to wrap into multiple rows */
+            gap: 20px; /* Added spacing between list items for a cleaner look */
+            list-style: none; /* Removed default bullets for a custom card-like style */
+            padding: 0; /* Removed default padding to align with flex layout */
+        }
+        li {
+            flex: 1 1 45%; /* Added to make list items take up roughly half the width for a two-column grid */
+            background: #1a1a1a; /* Added background to create card-like effect */
+            padding: 10px; /* Added padding for better spacing inside list items */
+            border-radius: 5px; /* Added rounded corners for a modern look */
         }
         footer {
-            text-align: center;
-            margin-top: 20px;
-            border-top: 1px solid #ffffff;
-            padding-top: 10px;
+            text-align: center; /* Centered footer content for a polished look */
+            margin-top: 20px; /* Added margin to separate footer from content */
+            border-top: 1px solid var(--primary-color); /* Added border to visually distinguish footer */
+            padding-top: 10px; /* Added padding to space out footer content */
         }
         @media (max-width: 600px) {
             h1 {
-                font-size: 3em;
+                font-size: 3em; /* Reduced h1 size on smaller screens for responsiveness */
+            }
+            ul {
+                flex-direction: column; /* Changed to column layout on mobile to stack list items */
             }
         }
     </style>
 </head>
 <body>
-    <article aria-label="DEFADEDE's project portfolio">
+    <article aria-label="DEFADEDE's project portfolio"> <!-- Added aria-label for accessibility -->
         <header>
-            <h1>My Projects</h1>
+            <h1>My Projects</h1> <!-- Moved h1 from head to body for correct HTML structure -->
         </header>
         <h2>Hello! :D</h2>
-        <p><i>This is a repository for <b>DEFADEDE's personal projects</b></i></p>
-        <p>If you don’t know me, it’s fine. I am just a normal person on the internet.</p>
-        <p>I am currently working on: <b>Python: Daily Task Reminder Script</b></p>
+        <p class="intro"><i>This is a repository for <b>DEFADEDE's personal projects</b></i></p> <!-- Added class="intro" for centered styling -->
+        <p class="intro">If you don’t know me, it’s fine. I am just a normal person on the internet.</p> <!-- Added class="intro" for centered styling -->
+        <p class="current-project">I am currently working on: <b>Python: Daily Task Reminder Script</b></p> <!-- Added class="current-project" for highlighted styling -->
         <p>The projects I might be working on in the future are:</p>
         <ul>
             <li><b>C++: Personal Budget Tracker</b></li>
@@ -58,10 +89,10 @@
             <li><b>HTML/CSS/JavaScript: Interactive To-Do List Web App</b></li>
             <li><b>Java + File I/O: Daily Journal App</b></li>
         </ul>
-        <p>Thank you for reading this. Have a great day!</p>
+        <p class="intro">Thank you for reading this. Have a great day!</p> <!-- Added class="intro" for centered styling -->
         <footer>
             <p>DeFaDeDe</p>
-            <p><a href="https://github.com/DEFADEDE">GitHub</a> | <a href="mailto:defadede0826@gmail.com">defadede0826@gmail.com</a></p>
+            <p><a href="https://github.com/DEFADEDE">GitHub</a> | <a href="mailto:defadede0826@gmail.com">defadede0826@gmail.com</a></p> <!-- Added GitHub link for interactivity -->
             <p>Last updated: 2025-5-26</p>
         </footer>
     </article>
