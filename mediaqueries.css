@@ -1,0 +1,9 @@
+/*If the width is less than 1200 pixel, we display the hamburger menu instead*/
+@media screen and (max-width :1200px){
+    #desktop-nav{
+        display:none;
+    }
+    #hamburger-nav{
+        display:flex;
+    }
+}
